@@ -28,3 +28,6 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+//CRUD
+Route::resource('albumes', AlbumController::class)->parameters(['albumes' => 'album']);
