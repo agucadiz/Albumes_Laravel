@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\TemaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -31,3 +32,5 @@ require __DIR__.'/auth.php';
 
 //CRUD
 Route::resource('albumes', AlbumController::class)->parameters(['albumes' => 'album']);
+
+Route::resource('temas', TemaController::class);
