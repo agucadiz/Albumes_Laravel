@@ -15,6 +15,9 @@ return new class extends Migration
     {
         Schema::create('temas', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->year('anyo');
+            $table->time('duracion');
             $table->timestamps();
         });
     }

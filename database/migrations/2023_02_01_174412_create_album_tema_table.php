@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('albums', function (Blueprint $table) {
-            $table->id();
-            $table->string('titulo');
-            $table->year('anyo');
-            $table->timestamps();
+        Schema::create('album_tema', function (Blueprint $table) {
+            $table->foreignId('album_id')->constrained('albumes');
+            $table->foreignId('tema_id')->constrained('temas');
+            $table->primary(['album_id', 'tema_id']);
         });
     }
 
@@ -28,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albums');
+        Schema::dropIfExists('album_tema');
     }
 };

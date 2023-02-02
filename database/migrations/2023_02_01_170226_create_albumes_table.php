@@ -13,8 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('artistas_temas', function (Blueprint $table) {
+        Schema::create('albumes', function (Blueprint $table) {
             $table->id();
+            $table->string('titulo');
+            $table->year('anyo');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artistas_temas');
+        Schema::dropIfExists('albumes');
     }
 };

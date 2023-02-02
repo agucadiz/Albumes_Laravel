@@ -13,9 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('albumes_temas', function (Blueprint $table) {
-            $table->id();
-            $table->timestamps();
+        Schema::create('artista_tema', function (Blueprint $table) {
+            $table->foreignId('artista_id')->constrained('artistas');
+            $table->foreignId('tema_id')->constrained('temas');
+            $table->primary(['artista_id', 'tema_id']);
         });
     }
 
@@ -26,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('albumes_temas');
+        Schema::dropIfExists('artista_tema');
     }
 };
