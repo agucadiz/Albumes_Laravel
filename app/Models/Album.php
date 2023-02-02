@@ -8,4 +8,16 @@ use Illuminate\Database\Eloquent\Model;
 class Album extends Model
 {
     use HasFactory;
+
+    protected $table = '$albumes';
+
+    protected $fillable = [
+        'titulo',
+        'anyo'
+    ];
+
+    public function temas()
+    {
+        return $this->belongsToMany(Tema::class);
+    }
 }
