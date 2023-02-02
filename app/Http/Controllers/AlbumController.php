@@ -6,6 +6,7 @@ use App\Http\Requests\StoreAlbumRequest;
 use App\Http\Requests\UpdateAlbumRequest;
 use App\Models\Album;
 
+
 class AlbumController extends Controller
 {
     /**
@@ -15,7 +16,8 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        //
+        $albumes = Album::all();
+        return view('albumes.index', ['albumes' => $albumes]);
     }
 
     /**
