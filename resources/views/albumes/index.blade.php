@@ -4,7 +4,7 @@
             Álbumes
         </h2>
     </x-slot>
-    <div class="py-6">
+    <div class="py-6 sm:px-6">
         <div class="p-6 bg-white border-gray-200 flex flex-col items-center max-w-7xl mx-auto px-10 shadow-sm sm:rounded-lg">
             <div class="border border-gray-200 shadow">
                 <table class="min-w-full divide-y divide-gray-200">
@@ -63,4 +63,5 @@
                 </a>
             </div>
         </div>
+    </div>
 </x-app-layout>
