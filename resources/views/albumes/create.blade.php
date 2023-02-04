@@ -7,7 +7,7 @@
 
     <div class="py-6 sm:px-6">
         <div class="p-6 bg-white border-gray-200 flex flex-col items-center max-w-7xl mx-auto px-10 shadow-sm sm:rounded-lg">
-            <form action="" method="POST">
+            <form action="{{ route('albumes.store') }}" method="POST">
                 @csrf
                 <div class="mb-6">
                     <label class="block  mt-2 mb-2  text-sm font-medium text-gray-900 dark:text-gray-300">
