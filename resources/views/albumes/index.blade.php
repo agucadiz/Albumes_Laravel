@@ -5,7 +5,8 @@
         </h2>
     </x-slot>
     <div class="py-6 sm:px-6">
-        <div class="p-6 bg-white border-gray-200 flex flex-col items-center max-w-7xl mx-auto px-10 shadow-sm sm:rounded-lg">
+        <div
+            class="p-6 bg-white border-gray-200 flex flex-col items-center max-w-7xl mx-auto px-10 shadow-sm sm:rounded-lg">
             <div class="border border-gray-200 shadow">
                 <table class="min-w-full divide-y divide-gray-200">
                     <thead class="bg-gray-50">
@@ -26,12 +27,16 @@
                             <tr class="whitespace-nowrap">
                                 <td class="px-6 py-4">
                                     <div class="text-sm font-medium text-gray-900">
-                                        {{ $album->titulo }}
+                                        <a href=" {{ route('albumes.show', $album) }} ">
+                                            {{ $album->titulo }}
+                                        </a>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4">
                                     <div class="text-sm font-medium text-gray-900">
-                                        {{ $album->anyo }}
+                                        <a href=" {{ route('albumes.show', $album) }} ">
+                                            {{ $album->anyo }}
+                                        </a>
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 inline-flex">
@@ -57,7 +62,8 @@
             </div>
             <div class="flex justify-center">
                 <a href="{{ route('albumes.create') }}">
-                    <button class="mt-5 py-1 px-4 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded text-sm text-center mr-2 mb-2">
+                    <button
+                        class="mt-5 py-1 px-4 text-green-700 hover:text-white border border-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded text-sm text-center mr-2 mb-2">
                         Añadir Álbum
                     </button>
                 </a>

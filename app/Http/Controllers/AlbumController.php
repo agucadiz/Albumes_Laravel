@@ -17,7 +17,10 @@ class AlbumController extends Controller
     public function index()
     {
         $albumes = Album::all();
-        return view('albumes.index', ['albumes' => $albumes]);
+
+        return view('albumes.index', compact('albumes'));
+
+        //return view('albumes.index', ['albumes' => $albumes]);
     }
 
     /**
@@ -51,7 +54,9 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-        //
+
+        return view('albumes.show', compact('album'));
+
     }
 
     /**
@@ -62,7 +67,7 @@ class AlbumController extends Controller
      */
     public function edit(Album $album)
     {
-        //
+       //
     }
 
     /**
