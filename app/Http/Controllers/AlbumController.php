@@ -16,7 +16,7 @@ class AlbumController extends Controller
      */
     public function index()
     {
-        $albumes = Album::all();
+        $albumes = Album::orderBy('id', 'desc')->paginate(8);
 
         return view('albumes.index', compact('albumes'));
 
@@ -43,7 +43,8 @@ class AlbumController extends Controller
     {
         $album = Album::create($request->all());
 
-        return redirect()->route('albumes.show', $album);
+        return redirect()->route('albumes.show', $album)
+            ->with('success', "Álbum $album->titulo creado correctamente");
     }
 
     /**
@@ -79,7 +80,8 @@ class AlbumController extends Controller
     {
         $album->update($request->all());
 
-        return redirect()->route('albumes.show', $album);
+        return redirect()->route('albumes.show', $album)
+            ->with('success', "Álbum $album->titulo editado correctamente");
     }
 
     /**
@@ -92,6 +94,7 @@ class AlbumController extends Controller
     {
         $album->delete();
 
-        return redirect()->route('albumes.index');
+        return redirect()->route('albumes.index')
+            ->with('success', "Álbum $album->titulo se ha eliminado correctamente");
     }
 }

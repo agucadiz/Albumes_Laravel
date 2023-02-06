@@ -24,7 +24,8 @@ class StoreAlbumRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'titulo' => 'required|string|min:2|max:25',
+            'anyo' => 'required|digits:4'
         ];
     }
 }
