@@ -43,7 +43,7 @@ class AlbumController extends Controller
     {
         $album = Album::create($request->all());
 
-        return redirect()->route('albumes.index', $album);
+        return redirect()->route('albumes.show', $album);
     }
 
     /**
@@ -54,9 +54,7 @@ class AlbumController extends Controller
      */
     public function show(Album $album)
     {
-
         return view('albumes.show', compact('album'));
-
     }
 
     /**
@@ -67,7 +65,7 @@ class AlbumController extends Controller
      */
     public function edit(Album $album)
     {
-       //
+        return view('albumes.edit', compact('album'));
     }
 
     /**
@@ -79,7 +77,9 @@ class AlbumController extends Controller
      */
     public function update(UpdateAlbumRequest $request, Album $album)
     {
-        //
+        $album->update($request->all());
+
+        return redirect()->route('albumes.show', $album);
     }
 
     /**

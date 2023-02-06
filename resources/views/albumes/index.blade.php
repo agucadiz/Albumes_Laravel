@@ -40,7 +40,7 @@
                                     </div>
                                 </td>
                                 <td class="px-6 py-4 inline-flex">
-                                    <form action="" method="GET">
+                                    <form action="{{ route('albumes.edit', $album) }}" method="GET">
                                         <button
                                             class="py-1 px-4 text-blue-700 hover:text-white border border-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded text-sm text-center mr-2 mb-2">
                                             Editar
