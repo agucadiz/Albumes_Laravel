@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreAlbumRequest;
 use App\Http\Requests\UpdateAlbumRequest;
 use App\Models\Album;
-
+use Illuminate\Support\Facades\DB;
 
 class AlbumController extends Controller
 {

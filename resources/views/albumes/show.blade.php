@@ -49,8 +49,7 @@
             @endforeach
 
             <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Duración total</h2>
-            <p class="mb-3 font-normal text-gray-700">{{ $album->temas_sum_duracion }}</p>
-
+            <p class="mb-3 font-normal text-gray-700">{{ $album->temas()->sum('duracion'); }}</p>
         </div>
     </div>
 </x-app-layout>
