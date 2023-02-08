@@ -43,12 +43,12 @@
             <h1 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $album->titulo }}</h1>
             <p class="mb-3 font-normal text-gray-700">{{ $album->anyo }}</p>
 
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Lista de temas</h2>
+            <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Lista de temas</h2>
             @foreach ($album->temas as $tema)
                 <p class="mb-3 font-normal text-gray-700">{{ $tema->titulo }} {{ $tema->duracion }}</p>
             @endforeach
 
-            <h2 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Duración total</h2>
+            <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Duración total</h2>
             <p class="mb-3 font-normal text-gray-700">{{ $album->temas()->sum('duracion'); }}</p>
         </div>
     </div>
