@@ -15,7 +15,8 @@ class TemaController extends Controller
      */
     public function index()
     {
-        //
+        $temas = Tema::all();
+        return view('temas.index', compact('temas'));
     }
 
     /**
