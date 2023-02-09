@@ -50,12 +50,12 @@
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-gray-900">
-
+                                            {{ $tema->artistas->count() }}
                                         </div>
                                     </td>
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-gray-900">
-
+                                            {{ $tema->albumes->count() }}
                                         </div>
                                     </td>
                                 </tr>
