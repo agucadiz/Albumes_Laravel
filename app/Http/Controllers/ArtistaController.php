@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreArtistaRequest;
 use App\Http\Requests\UpdateArtistaRequest;
+use App\Models\Album;
 use App\Models\Artista;
+use App\Models\Tema;
 
 class ArtistaController extends Controller
 {
@@ -15,7 +17,9 @@ class ArtistaController extends Controller
      */
     public function index()
     {
-        //
+        $artistas = Artista::all();
+
+        return view('artistas.index', compact('artistas'));
     }
 
     /**
