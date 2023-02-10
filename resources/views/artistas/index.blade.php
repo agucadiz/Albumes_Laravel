@@ -35,7 +35,7 @@
                         <tbody class="bg-white">
                             @foreach ($artistas as $artista)
                                 <tr class="whitespace-nowrap">
-                                    <td class="px-16 py-4">
+                                    <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-center text-gray-900">
                                             <a href=" {{ route('artistas.show', $artista) }} ">
                                                 {{ $artista->nombre }}

@@ -51,7 +51,7 @@ class ArtistaController extends Controller
      */
     public function show(Artista $artista)
     {
-        //
+        return view('artistas.show', compact('artista'));
     }
 
     /**
