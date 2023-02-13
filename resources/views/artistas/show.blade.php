@@ -11,9 +11,24 @@
             <h1 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $artista->nombre }}</h1>
 
             <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Lista de temas</h2>
-            @foreach ($artista->temas as $tema)
-                <p class="mb-3 font-normal text-gray-700">{{ $tema->titulo }} {{ $tema->duracion }}</p>
-            @endforeach
+            <ol>
+                <li>
+                    @php
+                        $titulo = [];
+                    @endphp
+                    @foreach ($artista->temas as $tema)
+                        @foreach ($tema->albumes as $album)
+                            @if (!in_array($album->titulo, $titulo))
+                                <p class="mb-3 font-normal text-gray-700">{{ $album->titulo }}</p>
+                                @php
+                                    $titulo[] = $album->titulo;
+                                @endphp
+                            @endif
+                        @endforeach
+                        <br>
+                    @endforeach
+                </li>
+            </ol>
         </div>
     </div>
 </x-app-layout>
