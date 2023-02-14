@@ -39,6 +39,9 @@ Route::resource('temas', TemaController::class);
 
 Route::resource('artistas', ArtistaController::class);
 
+Route::get('artistas/albumes/{artista}', [ArtistaController::class, 'artistas_albumes'])->name('artistas.albumes');
+
+
 
 
 

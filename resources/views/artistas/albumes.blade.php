@@ -10,7 +10,7 @@
             <!-- Show -->
             <h1 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">{{ $artista->nombre }}</h1>
 
-            <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Lista de Albumes en los que ha participado</h2>
+            <h2 class="mb-2 text-xl font-bold tracking-tight text-gray-900">Lista de Álbumes en los que ha participado</h2>
             <ol>
                 <li>
                     @php

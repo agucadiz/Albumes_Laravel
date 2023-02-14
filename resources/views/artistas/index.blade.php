@@ -37,7 +37,7 @@
                                 <tr class="whitespace-nowrap">
                                     <td class="px-6 py-4">
                                         <div class="text-sm font-medium text-center text-gray-900">
-                                            <a href=" {{ route('artistas.show', $artista) }} ">
+                                            <a href=" {{ route('artistas.albumes', $artista) }} ">
                                                 {{ $artista->nombre }}
                                             </a>
                                         </div>

@@ -51,7 +51,7 @@ class ArtistaController extends Controller
      */
     public function show(Artista $artista)
     {
-        return view('artistas.show', compact('artista'));
+        //
     }
 
     /**
@@ -86,5 +86,10 @@ class ArtistaController extends Controller
     public function destroy(Artista $artista)
     {
         //
+    }
+
+    public function artistas_albumes(Artista $artista)
+    {
+        return view('artistas.albumes', compact('artista'));
     }
 }
